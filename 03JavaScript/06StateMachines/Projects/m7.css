@@ -1,0 +1,46 @@
+html,main,body,header,h1,p,div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  --color-bg: white;
+  --color-fg: black;
+  --brightness: 1;
+}
+
+#app[data-state~='hidden'] {
+  opacity: 0;
+}
+
+#app[data-state~='visible.dark'] {
+  --color-bg: black;
+  --color-fg: white;
+}
+
+#display {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  opacity: var(--brightness);
+  transition: all 0.6s ease;
+}
+
+button {
+  --color: blue;
+  appearance: none;
+  background: var(--color);
+  color: white;
+  border: none;
+  margin: 20px;
+}

@@ -1,0 +1,21 @@
+html,main,body,canvas {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  background-color: gray;
+  text-align: center;
+  height: 5vh;
+}
+
+#myCanvas {
+  background-color: pink;
+  width: 90vw;
+  height: 90vh;
+}

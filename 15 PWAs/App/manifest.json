@@ -1,0 +1,16 @@
+{
+  "name": "my App",
+  "short_name": "myapp",
+  "start_url": ".",
+  "icons": [
+    {"src": "/images/alien-starfish.png",
+    "sizes": "192x192",
+    "type": "image/png"},
+    {"src": "/images/alien-starfish.png",
+    "sizes": "512x512",
+    "type": "image/png"}
+  ],
+  "theme_color": "#ea83d4",
+  "background_color": "#ea83d4",
+  "display": "standalone"
+}

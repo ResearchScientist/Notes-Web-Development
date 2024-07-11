@@ -1,0 +1,46 @@
+html,main,body,header,h1,p,div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  color: gray;
+}
+
+#box[data-state='pending'] {
+  background: orange;
+}
+
+#box[data-state='pending'] > span {
+  opacity: 0;
+}
+
+#box[data-state='resolved'] {
+  background: green;
+}
+
+#box[data-state='rejected'] {
+  background: red;
+}
+
+
+#cancel {
+  width: 100px;
+  height: 25px;
+  background-color: pink;
+  margin: 0 50px;
+}

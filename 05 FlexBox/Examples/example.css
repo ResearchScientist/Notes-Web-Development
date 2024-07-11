@@ -1,0 +1,88 @@
+/*Reset Styles*/
+/*article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+*/
+/*Box Sizing*/
+/** {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(-90deg, rgb(50,50,250) 0%, rgb(100,100,250) 100%);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+a:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    
+}
+
+input {
+    padding: 10px;
+    border: 0;
+}
+
+section, footer {
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+}
+
+/*flex*/
+
+.flex-nav ul {
+    border: 1px solid black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.flex-nav li {
+    flex: 3;
+}
+
+.flex-nav .social {
+    flex: 1;
+}
+
+@media all and (max-width: 1000px) {
+    .flex-nav ul {flex-wrap: wrap;}
+    .flex-nav li {flex: 1 1 50%}
+    .flex-nav .social {flex: 1 1 25%;}
+}
+
+@media all and (max-width: 500px) {
+    .flex-nav li {flex-basis: 100%;}
+    /*make the wrapper flex to turn its items into flex tiems*/
+    .wrapper {display: flex; flex-direction: column;}
+    /*make all the items inside wrapper have a very large order so that the order you put them in is before all of them*/
+    .wrapper > * {order: 1000;}
+    /*the nav will be first because 1000 is much later than 1*/
+    .flex-nav {order: 1;}
+    .top {order: 2;}
+    .details {order: 3;}
+    .signup {order: 4;}
+}

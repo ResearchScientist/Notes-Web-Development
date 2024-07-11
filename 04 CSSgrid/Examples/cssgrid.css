@@ -1,0 +1,66 @@
+/*Reset Styles*/
+article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+
+/*Custom Colour Variables*/
+:root {
+    --myblue: rgb(150,150,240);
+    --myblack: rgb(20,20,20);
+    --myback: rgba(250,250,250,0.5);
+    --mygrad: linear-gradient(-90deg, rgb(75,75,250) 0%, rgb(100,100,250) 100%);
+}
+
+/*Default Styles*/
+html {
+    box-sizing: border-box;
+    font-size: 21px;
+    color: var(--myblack);
+}
+
+/*Box Sizing*/
+*, *:before, *:after {box-sizing: inherit;}
+
+/*Basic Styles*/
+body {
+    background: var(--mygrad);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 5px 0;
+}
+
+/*Center Items or use flexbox to center them*/
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Style items*/
+.item {
+    font-size: 30px;
+    border: 1px solid var(--myblack);
+    background-color: var(--myback);
+}
+
+.item p {
+    margin: 0 0 5px 0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    /*border: 1px solid black;*/
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3,50px);
+    justify-items: center;
+    align-items: center;
+}
+
+.ite {
+    background: rgba(250,250,250,.50);
+}
+
+.ite1 {
+    justify-self: end;
+    align-self: end;
+}

@@ -1,0 +1,29 @@
+<!-- FOR MAKING AN INPUT FIELD TO QUERY MONGO DB -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mongo db app</title>
+</head>
+<body>
+    <input type="text" placeholder="Search" id="search"/>
+    <button id="btn">Click to search</button>
+    <pre>
+      <code id="code"></code>
+    </pre>
+    <script>
+        const btn = document.getElementById('btn');
+        const code = document.getElementById('code');
+        const search = document.getElementById('search');
+        
+        btn.addEventListener('click',async () => {
+            code.innerText = 'loading';
+            const res = await fetch(
+                '/get?search=' + encodeURIComponent(search.value)
+            );
+            const json = await res.json();
+            code.innerText = "\n" + JSON.stringify(json,null,4);
+        });
+    </script>
+</body>
+</html>

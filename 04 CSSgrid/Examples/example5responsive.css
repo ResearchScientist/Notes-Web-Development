@@ -1,0 +1,227 @@
+/*Reset Styles*/
+article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+
+/*Custom Colour Variables*/
+:root {
+    --myblue: rgb(150,150,240);
+    --myorange: rgb(220,150,150);
+    --myblack: rgb(20,20,20);
+    --myback: rgba(250,250,250,0.5);
+    --mygray: rgb(80,80,80);
+    --mygrad: linear-gradient(-90deg, rgb(75,75,250) 0%, rgb(100,100,250) 100%);
+}
+
+/*Default Styles*/
+html {
+    box-sizing: border-box;
+    font-size: 21px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.07);
+    background: var(--myblue);
+}
+
+/*Box Sizing*/
+*, *:before, *:after {box-sizing: inherit;}
+
+/*Basic Styles*/
+body {
+    margin: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+button {
+    background: var(--myorange);
+    border: 0;
+    padding: 10px 20px;
+}
+
+img {
+    /*max-width: 100px;*/
+}
+
+/*Grid*/
+
+.wrapper {          /*adding this here separate all the main sections*/
+    display: grid;
+    grid-gap: 20px;
+}
+
+.top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "hero hero cta1"
+        "hero hero cta2"
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: white url(cat.png);
+    background-size: cover;
+    /*background-position: bottom right;*/
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero > * {
+    background: var(--myorange);
+    padding: 5px 10px;
+}
+
+.cta {
+    background: var(--myorange);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.cta p {
+    margin: 0;
+}
+
+.cta1 {
+    grid-area: cta1;
+}
+
+.cta2 {
+    grid-area: cta2;
+}
+
+.price {
+    font-size: 60px;
+    /*font-weight: 100;*/
+}
+
+/*navitation*/
+
+.menu ul {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr))
+}
+
+.menu a {
+    background: var(--myorange);
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: var(--myblack);
+    
+}
+
+[aria-controls="menu-list"] {
+    display: none;
+}
+
+.features {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.feature {
+    background: rgb(250,250,250);
+    padding: 10px;
+    border: 1px solid rgb(250,250,250);
+    text-align: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.feature .icon {
+    max-width: 50px;
+    /*font-size: 50px;*/ /*if it was an actual icon*/
+}
+
+.feature h3, .feature p {
+    font-size: 20px;
+}
+
+.feature h3 {
+    font-weight: 600;
+}
+
+.feature p {
+    color: var(--mygray);
+}
+
+.about {
+    background: rgb(250,250,250);
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery h2 {
+    grid-column: 1 / -1;
+    display: grid; /*to add the bars on the side*/
+    grid-gap: 10px;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.gallery h2:before, .gallery h2:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to left,pink,transparent);
+}
+
+.gallery h2:after {
+    background: linear-gradient(to right,pink,transparent);
+}
+
+/*responsive*/
+
+@media (max-width: 1000px) {
+    .menu {order: -1}
+    [aria-controls="menu-list"] {display: block; margin-bottom: 10px;}
+    .menu ul {max-height: 0; transform: rotateX(90deg); transition: all 0.5s;}
+    [aria-expanded="true"] ~ ul {display: grid; max-height: 500px; transform: rotateX(0)}
+    [aria-expanded="false"] .close {display: none;}
+    [aria-expanded="true"] .open {display: inline-block;}
+    [aria-expanded="true"] .open {display: none;}
+}
+
+@media (max-width: 700px) {
+    .top {
+        grid-template-areas:
+            "hero hero"
+            "cta1 cta2"
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        grid-template-areas:
+            "hero"
+            "cta1"
+            "cta2"
+    }
+}

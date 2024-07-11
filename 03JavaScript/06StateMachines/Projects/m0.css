@@ -1,0 +1,15 @@
+#box {
+  width: 25vw;
+  height: 25vh;
+  background-color: salmon;
+  opacity: 1;
+}
+
+#box[data-state='inactive'] {
+  opacity: 0.5;
+}
+
+#box::after {
+  content: 'state: ' attr(data-state);
+  background: tomato;
+}

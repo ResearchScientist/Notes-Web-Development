@@ -1,0 +1,13 @@
+{
+  "name": "Progressive Web App",
+  "short_name": "myapp",
+  "start_url": ".",
+  "icons": [
+    {"src": "/Assets/not-syncing.png",
+    "sizes": "50x50",
+    "type": "image/png"}
+  ],
+  "theme_color": "#ea83d4",
+  "background_color": "#ea83d4",
+  "display": "standalone"
+}

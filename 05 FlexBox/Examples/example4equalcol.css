@@ -1,0 +1,48 @@
+/*Reset Styles*/
+/*article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+*/
+/*Box Sizing*/
+/** {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(-90deg, rgb(50,50,250) 0%, rgb(100,100,250) 100%);
+}
+
+a {
+    color: white;
+}
+
+.item.large {
+    font-size: 40px;
+}
+
+.item.small {
+    font-size: 12px
+}
+
+.item {
+    background:rgba(250,250,250,0.2);
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*FlexBox*/
+
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: flex-start;*/ /*use this to position the extra 2 elements how you like but make change the .flex below to flex: 0 1 calc(33.3% - 20px) */
+}
+
+.item {
+    flex: 1 1 calc(33.3% - 20px); /*if you want to position the last 2 items change this to flex: 0 1 calc(33.3% - 20px) and use the one above too*/
+}

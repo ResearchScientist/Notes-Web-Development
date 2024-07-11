@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="example5responsive.css">
+    <title>Responsive</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <div class="top">
+            <header class="hero">
+                <h1>The Joint</h1>
+                <p>Pretty Fun Place!</p>
+            </header>
+            <div class="cta cta1">
+                <p class="price">&#8364; 15,00</p>
+                <p>Half Hour</p>
+            </div>
+            <div class="cta cta2">
+                <p class="price">&#8364; 25,00</p>
+                <p>One Hour</p>
+            </div>
+        </div>
+        
+        <nav class="menu">
+            <button aria-expanded="false" aria-controls="menu-list">
+                <span class="open">O</span>
+                <span class="close">X</span>
+                Menu
+            </button>
+            <ul id="menu-list">
+                <li><a href="#">Wearables</a></li>
+                <li><a href="#">Edibles</a></li>
+                <li><a href="#">Drinkables</a></li>
+                <li><a href="#">Shareables</a></li>
+            </ul>
+        </nav>
+        
+        <section class="features">
+            <div class="feature">
+                <img class="icon" src="cat.png">
+                <h3>Wearables</h3>
+                <p>You can wear em</p>
+            </div>
+            <div class="feature">
+                <img class="icon" src="cat.png">
+                <h3>Edibles</h3>
+                <p>You can eat em</p>
+            </div>
+            <div class="feature">
+                <img class="icon" src="cat.png">
+                <h3>Drinkables</h3>
+                <p>You can drink em</p>
+            </div>
+            <div class="feature">
+                <img class="icon" src="cat.png">
+                <h3>Shareables</h3>
+                <p>You can share em</p>
+            </div>
+        </section>
+        
+        <section class="about">
+            <img src="cat.png" alt="cat" class="about__mockup">
+            <div class="about__details">
+                <h2>Featured Drinkable</h2>
+                <p>Wet, refreshing, and super tasty.</p>
+                <p>You can take it anywhere. Add it to your morning cereal, your protein shake, or dip your french fries.</p>
+                <button>Give it to me</button>
+            </div>
+        </section>
+        
+        <section class="gallery">
+            <h2>Instant Grams</h2>
+            <img src="cat.png" style="width: 200px;">
+            <img src="cat.png" style="width: 202px;">
+            <img src="cat.png" style="width: 203px;">
+            <img src="cat.png" style="width: 204px;">
+            <img src="cat.png" style="width: 205px;">
+            <img src="cat.png" style="width: 206px;">
+            <img src="cat.png" style="width: 207px;">
+            <img src="cat.png" style="width: 207px; height: 208px">
+            <img src="cat.png" style="width: 207px; height: 209px">
+            <img src="cat.png" style="height: 210px">
+        </section>
+        
+    </div>
+    
+    <script>
+        const navButton = document.querySelector('button[aria-expanded]');
+        
+        function toggleNav({ target }) {
+            //console.log(target); for testing which button is targeted
+            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+            navButton.setAttribute('aria-expanded', !expanded);
+        }
+        
+        navButton.addEventListener('click', toggleNav);
+    </script>
+    
+</body>
+</html>

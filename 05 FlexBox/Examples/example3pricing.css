@@ -1,0 +1,84 @@
+/*Reset Styles*/
+/*article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+*/
+/*Box Sizing*/
+/** {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(-90deg, rgb(50,50,250) 0%, rgb(100,100,250) 100%);
+}
+
+a {
+    color: white;
+}
+
+.plan ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plan ul li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.plan ul li:last-child {
+    border-bottom: 0;
+}
+
+.plan a {
+    text-decoration: none;
+    background: rgb(100,200,100);
+    padding: 10px;
+    color: black;
+    border-radius: 4px;
+}
+
+.plan h2 {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.price {
+    font-size: 50px;
+    font-family: serif;
+    margin: 10px 0;
+}
+
+/*flex container*/
+.pricing-grid {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /*add this to center the columns individually*/
+}
+
+.plan {
+    flex: 1;
+    background:rgba(250,250,250,0.2);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plan > * {
+    flex: 1 1 100%;
+}
+
+.plan .cta {
+    align-self: flex-end;
+}

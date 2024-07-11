@@ -1,0 +1,65 @@
+/*Reset Styles*/
+article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+
+/*Box Sizing*/
+* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+/*basic style for boxes*/
+.box {
+    color: white;
+    font-size: 21px;
+    text-align: center;
+    padding: 10px;
+}
+
+/*box colours*/
+.box1 {background: rgb(40,40,250)}
+.box2 {background: rgb(60,60,250)}
+.box3 {background: rgb(80,80,250)}
+.box4 {background: rgb(90,90,250)}
+.box5 {background: rgb(100,100,250)}
+.box6 {background: rgb(120,120,250)}
+.box7 {background: rgb(140,140,250)}
+.box8 {background: rgb(160,160,250)}
+.box9 {background: rgb(180,180,250)}
+.box10 {background: rgb(200,200,250)}
+
+/*Flexbox*/
+.container {
+    display: flex;
+    flex-direction: row;
+    /*height: 100vh;*/
+    flex-wrap: wrap;
+    /*justify-content: flex-end;*/
+    /*align-content: center;*/
+    /*align-items: flex-end;*/
+    
+}
+
+.box {
+    /*width: 33.33%;*/
+    /*padding: 20px;*/
+    /*border: 10px solid gray;*/
+    /*flex: 1; fills to end*/
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+.box3 {
+    /*align-self: flex-start;*/
+    flex-grow: 10;
+    /*flex-basis: 200px;*/
+}
+
+/*
+.box2 {
+    align-self: flex-start;
+    flex: 2;
+    flex-basis: 200px;
+}*/
+
+/*
+.box3 {
+    flex-basis: 200px;
+    flex: 4;
+}*/

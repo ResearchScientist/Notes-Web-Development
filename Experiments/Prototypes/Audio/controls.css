@@ -1,0 +1,286 @@
+* {margin:0; padding:0;}
+
+body {background: rgb(50,50,50);}
+
+header {
+  margin: 10px 5vw;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(100,100,100);
+  font-size: 16px;
+}
+
+header p:nth-of-type(1) {width:40px;}
+/*header p:nth-of-type(4) {color:rgba(100,150,240,0.5);}*/
+
+#subheader {
+  width: 70px;
+  color: rgba(100,150,240,0.5);
+  text-align: center;
+}
+
+#subheader p {margin: 0 auto;}
+
+#subheader p:nth-of-type(2) {
+  margin: 5px 0 0 -5px;
+  padding: 1px 0;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 14px;
+  /*border: 1px solid rgba(100,150,240,0.5);*/
+}
+
+#realButtonsSection {
+  /*margin: 50px 0;
+  display: grid;
+  grid-template-columns: 50px 118px 118px 300px 100px 200px 400px 1fr;
+  grid-template-rows: 400px;*/
+  /*align-items: center;
+  justify-items: center;*/
+  /*background: gray;*/
+}
+
+#wavescreen {
+  width: 90vw;
+  height: calc(90vw / 2);
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 1vw .5vw .5vw .5vw;
+  background: linear-gradient(to bottom, rgb(40,40,40) 70%,#4b4b4b 100%);
+}
+
+#innerscreen {
+  width: 88vw;
+  height: calc(88vw / 2);
+  margin: 0 auto;
+  background: rgb(20,20,20);
+}
+
+#realButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.realButtonSocket {
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  /*margin: 20px 0 0 5vw;*/
+  margin: 20px 0;
+  border-radius: 6px;
+  background: linear-gradient(to bottom, rgb(40,40,40) 70%,#4b4b4b 100%);
+}
+
+.realButton {
+  width: 100px;
+  height: 43px;
+  background: rgb(50,50,50);
+  border-radius: 6px;
+  border-top: 2px solid rgba(250,250,250,0.09);
+  border-bottom: 4px solid rgba(40,40,40,0.8);
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.8);
+  display: grid;
+  grid-template-rows: 44px 1fr;
+  place-items: center;
+  transition: all 0.20s;
+  color: rgba(100,150,250,0.4);
+}
+
+.realButton:hover {
+    grid-template-rows: 42px 1fr;
+    height: 43px;
+    border-top: 2px solid rgb(50,50,50);
+    box-shadow: none;
+    text-shadow: 0px 0px 2px rgb(100,150,250);
+    color: rgb(100,150,250);
+    transition: all 0.20s;
+}
+
+#rb1 {
+    grid-column: 2/3;
+}
+
+#rb2 {
+    grid-column: 3/4;
+}
+
+#sliderdiv {
+  margin: 0 0 0 5vw;
+  width: 150px;
+  /*border-bottom: 1px solid orange;*/
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: rgba(100,150,250,.2);
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 25px;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 25px;
+  border-radius: 2px;
+  border: 0px solid rgb(50,50,50);
+  background: rgb(40,40,40);
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+/* SLIDING DIAL */
+
+#dialSection {
+    width: 250px;
+    height 400px;
+    background: rgb(20,20,20);
+}
+
+#realDialSocket {
+    width: 260px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 6px;
+    /*background: linear-gradient(to bottom, rgb(40,40,40) 70%,#4b4b4b 100%);*/
+}
+
+#dial {
+    width: 200px;
+    height: 260px;
+    padding: 20px 5px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 5%,orange 50%,rgba(0,0,0,0) 95% );
+}
+
+#f1,#f2,#f3 {
+    width: 190px;
+    height: 80px;
+    margin: 5px auto;
+    background: rgb(20,20,20);
+}
+
+#barRowLabels {
+    grid-column: 5/6;
+}
+
+#barRowLabels p {
+    margin: 0;
+    color: rgb(100,100,100);
+}
+
+.barRow {
+    width: 200px;
+    height: 10px;
+    /*padding: 1px;*/
+    margin-bottom: 10px;
+    border-radius: 50px;
+    background: rgb(30,30,30);
+}
+
+.barFill {
+    height: 10px;
+    border-radius: 50px;
+    background: rgb(100,150,250);
+}
+
+#barRowSection {grid-column: 6/7; height: 50px;}
+/*#bf1 {animation: 3s ease-in-out infinite barSlide1;}
+#bf2 {animation: 1.5s ease-in-out infinite barSlide2;}
+#bf3 {animation: 2s ease-in-out infinite barSlide3;}*/
+
+#radialOutside {
+    grid-column: 7/8;
+    display: grid;
+    place-items: center;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(40,40,40) 60%,rgb(80,80,80) 65%,rgb(40,40,40) 70%);
+}
+
+#radialSection {
+    grid-column: 7/8;
+    display: grid;
+    place-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid rgb(100,150,250);  /*10*/ /*making it smaller requires changing the container shadow , too much gap in the inside  */
+    background: rgb(20,20,20);
+    margin: 0 0 0 -325px;  /*weird*/
+    /*box-shadow: 0 0 5px 0 rgb(100,150,250), inset 0 0 5px 0 rgb(100,150,250);*/
+}
+
+#radialBackground {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/*#radialTicks {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: dashed;
+    border-width: 5px;
+    border-color: rgb(250,250,250);
+    margin: -5px;
+    background: rgb(20,20,20);
+}*/
+
+.radialTick {
+    position: absolute;
+    transform-origin: center;
+    height: 10px;
+    width: 2px;
+    background: rgb(100,100,100);
+}
+
+#rt1 {top:0%; left:49.75%;}
+#rt2 {top:1%; left:59.25%; transform: rotate(11.25deg); background: rgb(255,255,255);box-shadow: 0 0 5px 1px rgb(255,255,255);}
+#rt3 {top:4%; left:68.5%; transform: rotate(22.5deg); background: rgb(255,255,255);box-shadow: 0 0 5px 1px rgb(255,255,255);}
+#rt4 {top:8.5%; left:76.5%; transform: rotate(33.75deg);}
+#rt5 {top:14.25%; left:83.75%; transform: rotate(45deg);}
+#rt6 {top:21.5%; left:89.5%; transform: rotate(56.25deg);}
+#rt7 {top:29.5%; left:94%; transform: rotate(67.5deg);}
+#rt8 {top:38.5%; left:96.75%; transform: rotate(78.75deg);}
+#rt9 {top:48.5%; left:97.75%; transform: rotate(90deg);}
+#rt10 {top:57.75%; left:96.75%; transform: rotate(101.25deg);}
+#rt11 {top:67%; left:94%; transform: rotate(112.5deg);}
+#rt12 {top:75%; left:89.5%; transform: rotate(123.75deg);}
+#rt13 {top:82.25%; left:83.75%; transform: rotate(135deg);}
+#rt14 {top:88%; left:76.5%; transform: rotate(146.25deg);}
+#rt15 {top:92.5%; left:68.5%; transform: rotate(157.5deg);}
+#rt16 {top:95.25%; left:59.25%; transform: rotate(168.75deg);}
+#rt17 {top:96.5%; left:49.75%;}
+#rt18 {top:95.25%; left:40%; transform: rotate(-168.75deg);}
+#rt19 {top:92.5%; left:31%; transform: rotate(-157.5deg);}
+#rt20 {top:88%; left:22.75%; transform: rotate(-146.25deg);}
+#rt21 {top:82.25%; left:15.75%; transform: rotate(-135deg);}
+#rt22 {top:75%; left:9.75%; transform: rotate(-123.75deg);}
+#rt23 {top:67%; left:5.5%; transform: rotate(-112.5deg);}
+#rt24 {top:57.75%; left:2.5%; transform: rotate(-101.25deg);}
+#rt25 {top:48.5%; left:1.5%; transform: rotate(-90deg);}
+#rt26 {top:38.5%; left:2.5%; transform: rotate(-78.75deg);}
+#rt27 {top:29.5%; left:5.5%; transform: rotate(-67.5deg);}
+#rt28 {top:21.5%; left:9.75%; transform: rotate(-56.25deg);}
+#rt29 {top:14.25%; left:15.75%; transform: rotate(-45deg);}
+#rt30 {top:8.5%; left:22.75%; transform: rotate(-33.75deg);}
+#rt31 {top:4%; left:31%; transform: rotate(-22.5deg);}
+#rt32 {top:1%; left:40%; transform: rotate(-11.25deg);}
+
+
+@media (min-width: 700px) {
+  header {font-size: 18px;}
+}

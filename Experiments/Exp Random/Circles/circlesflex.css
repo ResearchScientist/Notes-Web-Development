@@ -1,0 +1,41 @@
+#social-circles-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-auto-flow: column;
+}
+
+.social-circle {
+    display: grid;
+    /*position: relative;*/
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    min-width:25vw;
+    min-height:25vw;
+    background: var(--lightBlue);
+}
+
+.social-circle img {
+    align-self: center;
+    justify-self: center;
+    width: 30%;
+}
+
+.social-circle p {
+    /*position: absolute;*/
+    color: rgba(253,253,253,0);
+    align-self: center;
+    justify-self: center;
+    /*top: center;
+    left: center;*/
+}
+
+/*.social-circle:hover p {
+    color: var(--mainOrange);
+}*/
+
+.social-circle:hover {
+    /*color: var(--mainOrange);*/
+    /*border: 2px solid var(--mainOrange);*/
+    background: rgba(100,150,240,.45);
+}

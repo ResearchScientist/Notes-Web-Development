@@ -1,0 +1,33 @@
+/*Reset Styles*/
+article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+
+/*Custom Colour Variables*/
+:root {
+    --myblue: rgb(150,150,240);
+    --myblack: rgb(20,20,20);
+    --myback: rgba(250,250,250,0.5);
+    --mygrad: linear-gradient(-90deg, rgb(75,75,250) 0%, rgb(100,100,250) 100%);
+}
+
+/*Default Styles*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--myblack);
+}
+
+/*Box Sizing*/
+*, *:before, *:after {box-sizing: inherit;}
+
+/*Basic Styles*/
+body {
+    background: var(--mygrad);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 5px 0;
+}
+
+p {
+    margin: 0 0 20px 0;
+}

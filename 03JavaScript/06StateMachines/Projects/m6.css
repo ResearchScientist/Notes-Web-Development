@@ -1,0 +1,49 @@
+html,main,body,header,h1,p,div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box {
+  width: 50vw;
+  height: 50vh;
+  background-color: salmon;
+  opacity: 1;
+  left: calc(var(--x) * 1px);
+  top: calc(var(--y) * 1px);
+  transform: translate(calc(var(--dx) * 1px),calc(var(--dy) * 1px));
+}
+
+#box[data-state='inactive'] {
+  opacity: 0.5;
+}
+
+#box[data-state='idle'] {
+  transition: all 0.4s ease-in-out;
+}
+
+#box[data-state='dragging'] {
+  opacity: 0.25;
+  border: 1px solid red;
+}
+
+#box::after {
+  content: 'state: ' attr(data-state);
+  background: tomato;
+}
+
+#box::before {
+  content: 'point: ' attr(data-point);
+  background: pink;
+}

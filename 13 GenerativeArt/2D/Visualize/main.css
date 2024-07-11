@@ -1,0 +1,20 @@
+html,main,body,canvas {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  background-color: gray;
+  text-align: center;
+}
+
+#myCanvas {
+  background-color: pink;
+  width: 90vw;
+  margin: 5vw;
+}

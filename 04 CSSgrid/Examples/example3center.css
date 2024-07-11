@@ -1,0 +1,60 @@
+/*Reset Styles*/
+article,aside,details,figure,body,main,header,footer,nav,section,summary{display:block}
+
+/*Custom Colour Variables*/
+:root {
+    --myblue: rgb(150,150,240);
+    --myblack: rgb(20,20,20);
+    --myback: rgba(250,250,250,0.5);
+    --mygrad: linear-gradient(-90deg, rgb(75,75,250) 0%, rgb(100,100,250) 100%);
+}
+
+/*Default Styles*/
+html {
+    box-sizing: border-box;
+    font-size: 21px;
+    color: var(--myblack);
+}
+
+/*Box Sizing*/
+*, *:before, *:after {box-sizing: inherit;}
+
+/*Basic Styles*/
+body {
+    background: var(--mygrad);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 5px 0;
+}
+
+.screen {
+    height: calc(100vh - 20px);
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.hero {
+    background: var(--myback);
+    padding: 50px;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.item {
+    background: var(--myblue);
+    padding: 20px;
+}
+
+.unknown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
+    grid-gap: 10px;
+    justify-items: center;
+}

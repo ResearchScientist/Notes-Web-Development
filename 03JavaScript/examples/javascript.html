@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="javascript.css">
+  <script src="javascript.js" async="true"></script>
+  <title>JavaScript</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <section>
+      <h1 id="sectionTitle">Section 1</h1>
+      <p>First paragraph.</p>
+        
+      <button onClick="addBackground();">Click to change section 1 style class</button>
+    </section>
+      
+    <section>
+      <button onClick="newRow();">New row</button>
+      <button onClick="insertRow();">Add a row</button>
+      <button onClick="deleteRow();">Delete a row</button>
+      <table id="tableCats">
+        <caption>A cute cat table.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Mood</th>
+          </tr>
+        </thead>
+        <tbody id="contentCats">
+          <tr>
+            <td>Suki</td>
+            <td>happy</td>
+          </tr>
+          <tr>
+            <td>Pusheen</td>
+            <td>sleepy</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="theBox">
+      <p>Display</p>
+      <div id="therows">
+      <div class="droprow">
+        <div class="backdrops" id="col1"></div>
+        <div class="backdrops" id="col2"></div>
+        <div class="backdrops" id="col3"></div>
+        <div class="backdrops" id="col4"></div>
+        <div class="backdrops" id="col5"></div>
+      </div>
+      <div class="droprow">
+        <div class="backdrops" id="col6"></div>
+        <div class="backdrops" id="col7"></div>
+        <div class="backdrops" id="col8"></div>
+        <div class="backdrops" id="col9"></div>
+        <div class="backdrops" id="col10"></div>
+      </div>
+      <div class="droprow">
+        <div class="backdrops" id="col11"></div>
+        <div class="backdrops" id="col12"></div>
+        <div class="backdrops" id="col13"></div>
+        <div class="backdrops" id="col14"></div>
+        <div class="backdrops" id="col15"></div>
+      </div>
+      </div>
+    </section>
+     
+    <section id="sliderDiv">
+      <label for="slider"></label>
+      <input id="slider" type="range" list="ticks" min="0" max="10" step="1" value="5" oninput="showValue('slider','sliderValue')"/>
+    </section>
+    <datalist id="ticks">
+      <option>0</option>
+      <option>2</option>
+      <option>4</option>
+      <option>6</option>
+      <option>8</option>
+      <option>10</option>
+    </datalist>
+    <output id="sliderValue"></output>
+
+    <section>
+      <p>Pick a colour</p>
+      <input type="color" onchange = changeBackgroundColor(this.value);>
+      <p id="theColour"></p>
+    </section>
+      
+    <section id="floatingBoxContainer">
+      <button id="smallify" onclick="smallify();">Smallify</button>
+      <div id="floatingBox"></div>
+      <button id="bigify" onclick="bigify();">Bigify</button>
+    </section>
+
+    <section>
+      <button id="orangify" onclick="orangify();">Orangify</button>
+    </section>
+
+    
+    <section id="ToDoList">
+      <button id="new" onclick="newItem();">New item</button>
+      <button id="completed" onclick="completed();">Mark as completed</button>
+      <button id="reset" onclick="reset();">Reset list</button>
+      <div id="itemToAdd"></div>
+      <ul id="theList">
+        <li><input type="checkbox" name="someOptions" value="option a">option a</li>
+        <li><input type="checkbox" name="someOptions" value="option b">option b</li>
+        <li><input type="checkbox" name="someOptions" value="option c">option c</li>
+      </ul>
+      <ul id="completedList">Completed:</ul>
+    </section>
+    
+    <section id="canvasContainer">
+      <canvas id="myCanvas" width="300" height="300">Canvas not supported by your browser.</canvas>
+    </section>
+      
+    <section>
+      <form id="theForm">
+        <h1>Controls</h1>
+          <section id="controls">
+          <fieldset>
+            <legend>Frequency</legend>
+            <ul>
+              <li><label for="highF"><input type="radio" id="highF" name="frequency" value="high">High</label></li>
+              <li><label for="lowF"><input type="radio" id="lowF" name="frequency" value="low">Low</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Amplitude</legend>
+            <ul>
+              <li><label for="highA"><input type="radio" id="highA" name="amplitude" value="high">High</label></li>
+              <li><label for="lowA"><input type="radio" id="lowA" name="amplitude" value="low">Low</label></li>
+            </ul>
+          </fieldset>
+          </section>
+          <section id="userNameSection">
+            <label for="username">User Name <input type="text" id="username" name="name" placeholder="my username is . . ." autocomplete="off" required></label>
+          </section>
+          <section id="cookiesSection">
+            <label for="cookies">How many cookies do you want <input type="number" id="cookies" name="cookies" min="0" max="12" step="2" required></label>
+          </section>
+          <section id="dateSection">
+            <label for="date">Date <input type="date" id="date" name="date" required></label>
+          </section>
+          <input type="submit" value="Launch">
+      </form>
+    </section>
+      
+      
+    <section>
+      <form onsubmit="return formSubmitted();">
+        <fieldset>
+          <legend>Contact Cats</legend>
+          <label>Name: <input type="text" id="name" ></label>
+          <label>Email: <input type="email" id="email" ></label>
+          <input type="submit" value="Add new contact">
+        </fieldset>
+        <button onclick="emptyList();">Empty</button>
+        <button onclick="cm.save();">Save</button>
+        <button onclick="loadList();">Load</button>
+      </form>
+    </section>
+    <section>
+      <button onclick="search();">Get list of cats</button>
+      <div id="contacts"></div>
+    </section>
+      
+    <section id="dropDownSection">
+        <p>neat drop downs without any js, but still needs styling across browsers</p>
+      <details>
+        <summary>Suki's Bio</summary>
+        <p>She's a happy little cat from sun rio. Always wears a pink bow. She even has a truck.</p>
+      </details>
+      <details>
+        <summary>Pusheen's Bio</summary>
+        <p>Eating, sleeping, then eating, then sleeping some more. Might turn around for belly rub, but prefers to be turned over.</p>
+      </details>
+    </section>
+
+      
+    <section>
+      <video id="responsiveVideo" width="200" height="150" controls preload="none">
+        <!--<source src="someVid.mp4" type="video/mp4"/>-->
+      </video>
+    </section>
+      
+      
+    <section>
+      <time datetime="2019-6-1">2019 June 1</time>
+      <br>
+      <time datetime="2019-6-1T09:00">2019 June 1 9:00 AM</time>
+    </section>
+      
+    <!-- REALISTIC DASHBOARD -->
+      
+    <section id="realButtonsSection">
+      <div class="realButtonSocket" id="rb1">
+        <div class="realButton">F1</div>
+      </div>
+      <div class="realButtonSocket" id="rb2">
+        <div class="realButton">F2</div>
+      </div>
+      <section id="dialSection">
+        <div id="realDialSocket">
+          <div id="dial">
+            <div id="f1"></div>
+            <div id="f2"></div>
+            <div id="f3"></div>
+          </div>
+        </div>
+      </section>
+        
+      <section id="barRowLabels">
+        <p>mark 1</p>
+        <p>mark 2</p>
+        <p>mark 3</p>
+      </section>
+      <section id="barRowSection">
+        <div class="barRow"><div class="barFill" id="bf1"></div></div>
+        <div class="barRow"><div class="barFill" id="bf2"></div></div>
+        <div class="barRow"><div class="barFill" id="bf3"></div></div>
+      </section>
+        
+      <div id="radialOutside">
+      <section id="radialSection">
+        <div id="radialBackground">
+          <div id="radialTicks">
+            <div class="radialTick" id="rt1"></div>
+            <div class="radialTick" id="rt5"></div>
+            <div class="radialTick" id="rt2"></div>
+            <div class="radialTick" id="rt6"></div>
+            <div class="radialTick" id="rt3"></div>
+            <div class="radialTick" id="rt7"></div>
+            <div class="radialTick" id="rt4"></div>
+            <div class="radialTick" id="rt8"></div>
+            <div class="radialTick" id="rt9"></div>
+            <div class="radialTick" id="rt10"></div>
+            <div class="radialTick" id="rt11"></div>
+            <div class="radialTick" id="rt12"></div>
+            <div class="radialTick" id="rt13"></div>
+            <div class="radialTick" id="rt14"></div>
+            <div class="radialTick" id="rt15"></div>
+            <div class="radialTick" id="rt16"></div>
+            <div class="radialTick" id="rt17"></div>
+            <div class="radialTick" id="rt18"></div>
+            <div class="radialTick" id="rt19"></div>
+            <div class="radialTick" id="rt20"></div>
+            <div class="radialTick" id="rt21"></div>
+            <div class="radialTick" id="rt22"></div>
+            <div class="radialTick" id="rt23"></div>
+            <div class="radialTick" id="rt24"></div>
+            <div class="radialTick" id="rt25"></div>
+            <div class="radialTick" id="rt26"></div>
+            <div class="radialTick" id="rt27"></div>
+            <div class="radialTick" id="rt28"></div>
+            <div class="radialTick" id="rt29"></div>
+            <div class="radialTick" id="rt30"></div>
+            <div class="radialTick" id="rt31"></div>
+            <div class="radialTick" id="rt32"></div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </section>
+    
+    
+      
+    <section id="webCamSection">
+      <video id="webVideo" width=200 height=200 controls>no web video</video>
+      <button onclick="startWebcam();">Start Webcam</button>
+      <button onclick="stopWebcam();">Stop Webcam</button>
+    </section>
+      
+      
+    <section id="awesomeCanvasSection">
+      <canvas id="awesomeCanvas" width="400" height="400" tabindex="1">get some canvas</canvas>
+      <label for="size">Size</label><input id="size" type="range" min="10" max="100" value="50"><output id="sizeValue">50</output>
+      <label for="colour">Colour</label><input id="colour" type="color">
+    </section>
+    
+    <section id="barPlotSection">
+      <canvas id='barPlotCanvas' width='500' height='500'>you need canvas</canvas>
+      <ul id="sliders"></ul>
+    </section>
+    
+    <section>
+      <div id="divColourChoice">Pick colour: <input type="color" value="#50FF00" id="colourChoice" list="theColours"></div>
+      <datalist id="theColours">
+        <option>#FF0000</option>
+        <option>#00FF00</option>
+      </datalist>
+      <div id="divToColour"></div>
+    </section>
+    
+    <section>
+      <input list="names">
+      <datalist id="names">
+        <option value="one"></option>
+        <option value="two"></option>
+        <option value="three"></option>
+      </datalist>
+    </section>
+
+
+  </main>
+  <footer></footer>
+</body>
+</html>

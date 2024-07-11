@@ -1,0 +1,76 @@
+html, body , div, p {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    height: 100px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    margin-bottom: 100px;
+    /*background: rgb(240,240,240);*/
+}
+
+p {
+    /*background: rgb(220,220,220);*/
+    justify-self: center;
+}
+
+.active-page {
+    border-bottom: 1px solid rgb(100,150,240);
+}
+
+/*.circle1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(100,150,240);
+    border-radius: 50%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    animation: grow 1s forwards;
+}*/
+
+/*@keyframes grow {
+    0% {height: 0; width: 0;}
+    25% {height: 10vw; width: 10vw;}
+    50% {height: 10vw; width: 10vw;}
+    90% {height: 100vw; width: 100vw; border-radius: 50%;}
+    100% {height: 100vh; width: 100vw; border-radius: 0;}
+}*/
+
+
+
+/* no js */
+
+#thelabel {
+    display: block;
+    background:  rgb(100,150,240);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+input:checked + #thelabel {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+}
+
+input {
+    visibility: hidden;
+    position: absolute;
+}

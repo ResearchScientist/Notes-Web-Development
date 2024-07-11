@@ -1,0 +1,13 @@
+{
+  "name": "PWA Google Dev",
+  "short_name": "pwa",
+  "start_url": ".",
+  "icons": [
+    {"src": "/Assets/onlinebig.png",
+    "sizes": "512x512",
+    "type": "image/png"}
+  ],
+  "theme_color": "#ea83d4",
+  "background_color": "#ea83d4",
+  "display": "standalone"
+}

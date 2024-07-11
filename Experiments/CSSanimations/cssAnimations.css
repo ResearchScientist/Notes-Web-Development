@@ -1,0 +1,44 @@
+body {
+    background: rgb(100,100,100);
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: rgb(100,200,100);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgb(100,200,100);
+    background-clip: padding-box;
+}
+
+#square1 {
+    animation-name: spin;
+    animation-duration: 2s;
+}
+
+#circle1 {
+    border-radius: 50%;
+    transform: translate(200px,200px);
+    animation-name: squarePath;
+    animation-duration: 2s;
+}
+
+#circle2 {
+    border-radius: 100%;
+}
+
+@keyframes spin {
+    to {transform: rotate(360deg);}
+}
+
+@keyframes squarePath {
+    0% {transform: translate(200px,200px);}
+    25% {transform: translate(400px,200px);}
+    50% {transform: translate(400px,400px);}
+    75% {transform: translate(200px,400px);}
+    100% {transform: translate(200px,200px);}
+}
