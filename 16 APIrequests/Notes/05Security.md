@@ -1,12 +1,25 @@
-Best defense is to not trust any data coming in from the client.
-That includes
+# Attack Vectors
+
+Do not trust any data coming in from the client.
+
 - input fields
 - GET requests
 - POST requests
 - HTTP headers
 - cookies
 - user uploaded files
-Make sure to sanitise all data heading to the server.
+
+# Defenses
+
+- rate limiting
+- password encription : bcrypt node package
+- jwt blacklisting
+- json schema validation
+- escape html & css
+- ORM/ODM injection protection
+- security linter
+
+Sanitise all data heading to the server.
 
 Have the server use HTTPS and HSTS 
 
@@ -57,13 +70,18 @@ Hidden button is overlayed over a site's UI.
 
 Do not allow site to be embedded in an iframe by another site. This is stated with HTTP headers.
 
-# DOS
+# DDOS
 
 ## Attack
 
-Overwhelming the server with numerous requests or slow reads.
+Distributed Denial of Service. Overwhelming the server with numerous requests or slow reads.
 
 ## Defense
 
 Block intrusive traffic. Place defense before or within the server.
+
+**Rate Limit**
+
+- express-rate-limit : a node js package
+- nginx : a reverse proxy server put infront of node server
 
