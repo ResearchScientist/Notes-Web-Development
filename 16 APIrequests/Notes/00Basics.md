@@ -64,7 +64,6 @@ someHandledFunction();
 
 `fetch` returns a promise
 
-
 # Fetch
 
 ```javascript

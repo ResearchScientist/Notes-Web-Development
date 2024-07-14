@@ -36,5 +36,3 @@ body contains
 `HEAD` obtain metadata about a resource without obtaining the body content , ie. last updated 
 `PUT` update an existing resource or make a new one
 `DELETE` remove given resource
-
-
